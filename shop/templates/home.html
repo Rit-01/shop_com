@@ -1,0 +1,188 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="margin-top: 55px;">
+            <img style="height: 500px; width: 400px;" src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="home1">
+
+        </div>
+        <div class="carousel-item" style="margin-top: 55px;">
+            <img style="height: 500px; width: 400px;" src="{% static 'images/home2.jpg' %}" class="d-block w-100" alt="home2">
+        </div>
+        <div class="carousel-item" style="margin-top: 55px;">
+            <img style="height: 500px; width: 400px;" src="{% static 'images/home2.png' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-----------------Home block 2------------------>
+
+
+
+<div id="carouselExampleInterval" class="carousel slide mt-5" data-bs-ride="carousel">
+
+    <div class="hi p-5">
+        <h3 style="text-align: center; margin-bottom: 40px; margin-top: -25px;">Best Products</h3>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <div class="row mx-2">
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 200px;" src="{% static 'images/s1.png' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span style="margin-left: 100px; font-size: 18px;">sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/s3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/dt2.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/dt3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="2000">
+                <div class="row mx-2">
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 200px;" src="{% static 'images/s2.png' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span style="margin-left: 100px; font-size: 18px;">sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/s3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/dt2.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/dt3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <div class="row mx-2">
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 200px;" src="{% static 'images/s3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span style="margin-left: 100px; font-size: 18px;">sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/s3.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/dt2.jpg' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+
+                    <div class="col-3 card">
+                        <img style="height: 250px; width: 250px;" src="{% static 'images/home1.png' %}" class="d-block w-100" alt="...">
+                        <hr>
+                        <span>sofa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+<!-----------------Home block 3------------------->
+
+<div class="row p-5">
+    <div class="col-sm">
+
+        <div class="card-body">
+            <img style="height: 500px; width: 400px;" src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="home1">
+            <h5 class="card-title">Products</h5>
+            <p class="card-text">Explore our products and shop now.</p>
+            <a href="http://127.0.0.1:8000/" class="btn btn-primary">Explore</a>
+        </div>
+
+    </div>
+    <div class="col-sm">
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <img style="height: 215px; width: 350px;" src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="home1">
+                </div>
+
+                <div class="col-6">
+                    <img style="height: 215px; width: 350px;" src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="home1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <img style="height: 215px; margin-top: 20px;" src="{% static 'images/home1.jpg' %}" class="d-block w-100" alt="home1">
+                </div>
+
+            </div>
+
+            <p>POPULAR CATEGORIES</p>
+            <p class="card-text">
+                Queen Size Beds, King Size Beds, Coffee Tables, Dining Sets, Recliners, Sofa cum Beds, Rocking Chairs, Cabinets, Book Shelves, TV Unit, Wardrobes, Outddoor Furniture, Bar Cabinets, Wall Shelves, Photo Frames, Bed Sheets, Mattresses, Table Cloth, Living
+                Room Furniture, Study Tables, Dining Room Furniture, Office Furniture, Bed Room Furniture, Dining Table, Beds, Sofas</p>
+        </div>
+
+    </div>
+</div>
+
+<!-----------------Home block 4------------------->
+
+
+
+{% endblock %}

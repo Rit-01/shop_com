@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(a=rl1ivu3l3+*7z+6ipa)m5yzu7*$%8161l=+(rn##$rpx_5n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['webfurniture.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 

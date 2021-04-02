@@ -12,6 +12,9 @@ class Product(models.Model):
 
     # method for recive data "product"
 
+    def __str__(self):
+        return self.name
+
     @staticmethod
     def get_product_by_id(ids):
         return Product.objects.filter(id__in = ids)

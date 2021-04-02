@@ -9,11 +9,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Hello, world!</title>
+    <title>Assets Furniture</title>
 </head>
 
-<body style="background-color: rgb(241, 237, 239);">
-
+<body style="background-color: rgb(241, 237, 239); margin-top: 60px;">
+    <section id="top"></section>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/home">New Assets Furniture</a>
@@ -21,21 +21,14 @@
             <span class="navbar-toggler-icon"></span>
           </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 18px;">
-
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Shop</a>
+                        <a class="nav-link" href="/shop">Shop</a>
                     </li>
-
-                    <!------------<li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>---->
-
-
                 </ul>
 
 
@@ -43,7 +36,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/cart"><i style="font-size: 25px;" class="fa fa-cart-plus" aria-hidden="true"></i>
                         <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
-                        </a>
+                    </a>
                     </li>
 
                     {% if request.session.customer %}
@@ -55,6 +48,8 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/logout">Logout</a>
                     </li>
+
+
 
                     {% else %}
 
@@ -72,6 +67,7 @@
             </div>
         </div>
     </nav>
+    </section>
 
 
 
@@ -102,7 +98,7 @@
 
             <!-- Section: Text -->
             <section class="mb-4">
-                <h3>New Assets Furniture</h3>
+                <h3 style="color: rgb(145, 160, 173);">New Assets Furniture</h3>
                 <hr>
 
             </section>
@@ -118,13 +114,13 @@
 
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-white">Home</a>
+                                <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Shop</a>
+                                <a href="http://127.0.0.1:8000/" class="text-white" style="text-decoration: none;">Shop</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">Login</a>
+                                <a href="/login" class="text-white" style="text-decoration: none;">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -168,14 +164,11 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
-
-
-
 
 
     <!-- Optional JavaScript; choose one of the two! -->

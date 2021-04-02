@@ -44,20 +44,18 @@
     </button>
 </div>
 
+<hr>
 
 <!-----------------Home block 2------------------>
 
-<div id="carouselExampleInterval" class="carousel slide mt-5" data-bs-ride="carousel">
 
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="container">
-        <h3 style="padding: 5px; text-align: center; margin-bottom: 10px; font-style: italic;">Best Products</h3>
+        <h3 style="text-align: center;font-style: italic;">Best Products</h3>
         <hr>
         <div class="carousel-inner">
-
             <div class="carousel-item active" data-bs-interval="10000">
-
                 <div class="row mx-2">
-
                     <div class="col-3">
                         <img style="height: 250px; width: 250px;" src="{% static 'images/sofa/sofa_PNG6920.png' %}" class="d-block w-100" alt="...">
                         <hr><span class="cap text-center" style="font-size: 20px;">Sofa</span>
@@ -79,7 +77,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="carousel-item" data-bs-interval="2000">
                 <div class="row">
@@ -104,7 +101,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="carousel-item">
                 <div class="row">
@@ -132,7 +128,6 @@
         </div>
     </div>
 
-
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -148,16 +143,17 @@
 <!-----------------Home block 3------------------>
 
 <div class="container">
-    <div class="row p-5">
-        <h2 class="hed text-center" style="font-style: italic; margin-bottom: 20px;">Deals & Offers</h2>
+    <div class="row">
+        <h2 class="hed text-center" style="font-style: italic;">Deals & Offers</h2>
         <hr>
         <div class="col-sm">
             <div class="card-body">
                 <img style="height: 500px; width: 400px;" src="{% static 'images/home5.png' %}" class="d-block w-100" alt="home1">
                 <h5 class="card-title">Products</h5>
                 <p class="card-text">Explore our products and shop now.</p>
-                <div class="go">
-                    <button><a style="color: black; text-decoration: none;" href="http://127.0.0.1:8000/">Explore</a></button>
+
+                <div class="btn1">
+                    <a href="/shop" class="btn btn-outline-info border rounded col-lg-3">Explore</a>
                 </div>
             </div>
 
@@ -196,9 +192,10 @@
 <!-----------------Home block 4------------------>
 
 <div class="container">
-    <div class="row p-5">
-        <h2 class="hed text-center" style="font-style: italic; margin-bottom: 20px;margin-top: -60px;">Services Available In-Stores</h2>
-        <hr>
+    <h2 class="hed text-center" style="font-style: italic;">Services Available In-Stores</h2>
+    <hr>
+    <div class="row">
+
         <div class="col-sm">
             <div class="card-body">
                 <img style="height: 300px; width: 300px;" src="{% static 'images/5-Year-Warranty.jpg' %}" class="d-block w-100" alt="home1">
@@ -218,7 +215,7 @@
     </div>
 
 
-    <div class="row p-5" style="margin-top: -80px;">
+    <div class="row">
         <div class="col-sm">
             <div class="card-body">
                 <img style="height: 300px; width: 300px;" src="{% static 'images/Free-Design-Consultation.jpg' %}" class="d-block w-100" alt="home1">
@@ -240,9 +237,9 @@
 
 <!------------- home block 5---------->
 <div class="container">
-    <div class="row p-5">
-        <h2 class="hed text-center" style="font-style: italic; margin-bottom: 20px; margin-top: -60px;">New Assets Furniture Store Indore</h2>
-        <hr>
+    <h2 class="hed text-center" style="font-style: italic;">New Assets Furniture Store Indore</h2>
+    <hr>
+    <div class="row">
         <div class="col-sm">
             <div class="card-body">
                 <img style="height: 350px; width: 350px;" src="{% static 'images/cont.png' %}" class="d-block w-100" alt="home1">
@@ -278,12 +275,12 @@
 
 <!-------------Home Block 5------------>
 
-<div class="container p-5">
-    <h3 style="text-align: center; font-style: italic;margin-top: -60px;">Looking For Bulk Furniture?</h3>
+<div class="container">
+    <h3 style="text-align: center; font-style: italic;">Looking For Bulk Furniture?</h3>
     <hr>
     <img style="width: 100%; height: 350px;" src="{% static 'images/Bulk-Banner.jpg' %}" alt="">
-    <div class="go" style="text-align: center;">
-        <button><a style="color: black; text-decoration: none;" href="http://127.0.0.1:8000/">Go Shop</a></button>
+    <div class="btn1 m-4 text-center">
+        <a href="/shop" class="btn btn-outline-info border rounded col-lg-3">Explore</a>
     </div>
     <hr>
 </div>

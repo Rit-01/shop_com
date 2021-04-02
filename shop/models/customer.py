@@ -7,13 +7,22 @@ class Customer(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=500)
 
+   
+    def __str__(self):
+        return self.first_name
 
     # for customer object and call function
 
     def register(self):
         self.save()
 
-    
+
+
+    @staticmethod
+    def get_all_customer():
+        return customer.objects.all()
+
+
     @staticmethod
     def get_customer_by_email(email):
         try:

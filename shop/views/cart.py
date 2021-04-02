@@ -8,3 +8,4 @@ class Cart(View):
         products = Product.get_product_by_id(ids)
         print(products)
         return render(request, 'cart.html', {'products':products})
+

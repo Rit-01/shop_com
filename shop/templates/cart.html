@@ -1,11 +1,14 @@
 {% extends 'base.html' %} {% block content %} {% load cart %}
-<div class="container">
+
+
+<div class="container p-5">
     <div class="border rounded p-4 m-4">
         <p style="font-size: 40px;" class="display">Your cart</p>
+
         <hr>
 
-        <table class="table">
-            <thead>
+        <table class="table" style="box-shadow: 5px 10px #888888;">
+            <thead style="background-color: aqua;">
                 <tr>
                     <th>Sno.</th>
                     <th>Product Image</th>
@@ -20,10 +23,37 @@
             <tbody>
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td><img style="height: 80px; width: 80px;" src="{{product.image.url}}" alt=""></td>
+                    <td><img style="height: 60px; width: 80px; border-radius: 15%;" src="{{product.image.url}}" alt=""></td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
-                    <td>{{product|cart_quantity:request.session.cart}}</td>
+                    <td>
+
+                        <div class="row">
+
+
+                            <form action="/#{{product.id}}" class="col-2" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="-">
+                                <input hidden type="text" name='product' value='{{product.id}}'>
+                                <input hidden type="text" name='remove' value='True'>
+                            </form>
+
+
+
+
+                            {{product|cart_quantity:request.session.cart}}
+
+
+                            <form action="/#{{product.id}}" class="col-2" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="+">
+                                <input hidden type="text" name='product' value='{{product.id}}'>
+                            </form>
+
+
+                        </div>
+
+                    </td>
                     <td>{{product|price_total:request.session.cart|currency}}</td>
                 </tr>
                 {% endfor %}
@@ -33,13 +63,13 @@
                 <tr>
                     <th colspan="2"></th>
                     <th class="text-center" colspan="3">Total</th>
-
                     <th>{{products|total_cart_price:request.session.cart|currency}}</th>
                 </tr>
             </tfoot>
         </table>
 
-        <div class="m-3 p-3">
+        <div class="row m-3 p-3">
+            <a href="/shop" class="mx-5 btn btn-outline-info border rounded col-lg-3">Continue Shop</a>
             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" style="float: right;" class="btn btn-outline-info border rounded col-lg-3">Check out</a>
         </div>
     </div>

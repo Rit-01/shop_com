@@ -15,6 +15,10 @@ class Order(models.Model):
     date = models.DateField(default=datetime.datetime.today)
     status = models.BooleanField(default=False)
     
+    
+    @staticmethod
+    def get_product_by_id(ids):
+        return Product.objects.filter(id__in = ids)
 
     def placeOrder(self):
         self.save()

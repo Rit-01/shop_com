@@ -28,7 +28,8 @@ class Index(View):
 
         request.session['cart'] = cart
         print('cart' ,request.session['cart'])
-        return redirect('shop')
+        return redirect('cart')
+        return render(request, 'index.html', data)
         
 
     def get(self, request):
@@ -48,6 +49,7 @@ class Index(View):
         data['categories'] = categories
        # print('you are : ' ,request.session.get('email'))
         return render(request, 'index.html', data)
+
 
 def home(request):
     return render(request, 'home.html')

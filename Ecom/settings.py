@@ -25,7 +25,10 @@ SECRET_KEY = '(a=rl1ivu3l3+*7z+6ipa)m5yzu7*$%8161l=+(rn##$rpx_5n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1'
+    'myassetsapp.herokuapp.com'
+]
 
 
 # Application definition

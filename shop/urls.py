@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import homep, login, signup
 from .views.homep import Index
+from .views.homep import View
 from .views.signup import Signup
 from  .views.login import Login , logout
 from .views.cart import Cart
@@ -13,6 +14,7 @@ from .middlewares.auth import auth_middleware
 urlpatterns = [
     path('', Index.as_view(), name='shop'),
     path('shop', Index.as_view(), name='shop'),
+    path('view', homep.view, name='view'),
     path('home', homep.home, name='home'),
     path('about', homep.about, name='about'),
     path('signup', Signup.as_view(), name='signup'),

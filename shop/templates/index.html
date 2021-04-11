@@ -9,12 +9,14 @@
 
             <!---------inherit all qury set data------->
             <div class="col-lg-3 mx-auto">
+
                 <div class="list-group" style="font-style: italic;">
                     <!-------Get all Product by reload-------->
                     <a style="color: black;" href="/" class="list-group-item" aria-current="true">All Products</a> {% for category in categories %}
 
                     <a style="color: black;" href="/?category={{category.id}}" class="list-group-item" aria-current="true">{{category.name}}</a> {% endfor %}
                 </div>
+
             </div>
 
 
@@ -24,13 +26,24 @@
                 <div class="row mx-auto">
                     {% for product in products %}
 
-                    <div class="card mx-2 mb-3" id="{{product.id}}" style="width: 18rem;">
+                    <div class="card mx-2 mb-3" id={{product.id}} style="width: 18rem;">
                         <img style="height: 300px; width: 260px; margin-top: 8px;" src="{{product.image.url}}" class="card-img-top" alt="...">
                         <hr style="margin-bottom: -10px; width: auto;">
                         <div class="card-body">
                             <p style="font-size: 16px;" class="card-title">{{product.name}}</p>
                             <hr style="margin-top: 10px; width: 260px; margin-left: -14px">
-                            <p style="font-size: 18px;" class="card-text"><b>{{product.price|currency}}</b></p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p style="font-size: 18px;" class="card-text"><b>{{product.price|currency}}</b></p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <button style="margin-left: 15px; background:white; width: 100px;">
+                                        <a style="text-decoration: none; color: black;" href="/view">View</a>
+
+                                    </button>
+                                </div>
+                            </div>
+
 
                             <!-------{{product | is_in_cart:request.session.cart}}-------->
 
@@ -41,6 +54,7 @@
                             {% if product|is_in_cart:request.session.cart %}
 
                             <div class="row">
+
 
                                 <form action="/#{{product.id}}" class="col-2" method="POST">
                                     {% csrf_token %}
@@ -58,7 +72,6 @@
                                     <input hidden type="text" name='product' value='{{product.id}}'>
                                 </form>
 
-
                             </div>
 
                             {% else %}
@@ -68,6 +81,7 @@
                                 <input hidden type="text" name='product' value='{{product.id}}'>
                                 <input style="width: 100%;" type="submit" class="float-right btn btn-light border" value="Add to cart">
                             </form>
+
                             {% endif %}
                         </div>
                     </div>
@@ -77,5 +91,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

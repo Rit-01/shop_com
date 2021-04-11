@@ -27,33 +27,10 @@
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
                     <td>
-
-                        <div class="row">
-
-
-                            <form action="/#{{product.id}}" class="col-2" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="-">
-                                <input hidden type="text" name='product' value='{{product.id}}'>
-                                <input hidden type="text" name='remove' value='True'>
-                            </form>
-
-
-
-
-                            {{product|cart_quantity:request.session.cart}}
-
-
-                            <form action="/#{{product.id}}" class="col-2" method="POST">
-                                {% csrf_token %}
-                                <input type="submit" value="+">
-                                <input hidden type="text" name='product' value='{{product.id}}'>
-                            </form>
-
-
-                        </div>
+                        {{product|cart_quantity:request.session.cart}}
 
                     </td>
+
                     <td>{{product|price_total:request.session.cart|currency}}</td>
                 </tr>
                 {% endfor %}
